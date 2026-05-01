@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1stCite — Engaging Science</title>
-<meta name="description" content="Engaging Science. 1stCite helps captures the full value in scientific conferences.">
+<meta name="description" content="1stCite captures the full value of scientific conferences — before, during, and after the meeting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #1A5276;
@@ -20,7 +20,6 @@
     --light-blue: #EBF5FB;
     --light-green: #EBF5EC;
     --border: #D5DBDB;
-    --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -58,225 +57,223 @@
   }
   .nav-cta:hover { background: var(--accent) !important; }
 
-  /* HERO */
+  /* HERO THESIS */
   .hero-thesis {
-  padding: 8rem 2rem 3rem;
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-}
-.hero-thesis-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-.hero-thesis h1 {
-  font-family: var(--sans);
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-.hero-thesis p {
-  font-family: var(--sans);
-  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
-  font-weight: 400;
-  color: var(--body);
-  line-height: 1.5;
-  max-width: 720px;
-  margin: 0 auto;
-}
-  .hero {
-    padding: 9rem 2rem 4rem; max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    padding: 8rem 2rem 4rem;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
   }
-  .hero-text h1 {
-    font-family: var(--sans); font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15; color: var(--dark);
-    margin-bottom: 1.25rem; letter-spacing: -0.02em;
+  .hero-thesis-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
   }
-  .hero-text p {
-    font-size: 1.05rem; color: var(--gray);
-    line-height: 1.75; margin-bottom: 2rem;
+  .hero-thesis h1 {
+    font-family: var(--sans);
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
   }
-  .hero-cta {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--navy); color: #fff;
-    padding: 0.85rem 1.75rem; border-radius: 8px;
-    text-decoration: none; font-weight: 600; font-size: 0.95rem;
-    transition: all 0.25s; box-shadow: 0 2px 12px rgba(26,82,118,0.15);
+  .hero-thesis .lede {
+    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+    color: var(--body);
+    margin-bottom: 0.75rem;
   }
-  .hero-cta:hover {
-    background: var(--accent);
-    box-shadow: 0 4px 20px rgba(46,134,193,0.25);
-    transform: translateY(-1px);
-  }
-  .hero-cta svg { width: 18px; height: 18px; }
-  .hero-cta-secondary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: transparent; color: var(--navy);
-    padding: 0.85rem 1.75rem; border-radius: 8px;
-    text-decoration: none; font-weight: 600; font-size: 0.95rem;
-    transition: all 0.25s; border: 2px solid var(--navy);
-    margin-left: 0.75rem;
-  }
-  .hero-cta-secondary:hover {
-    background: var(--navy); color: #fff;
-  }
-  .hero-image {
-    border-radius: 12px; overflow: hidden;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-  }
-  .hero-image img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
-    border-radius: 12px;
+  .hero-thesis ul {
+    text-align: left;
+    display: inline-block;
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+    color: var(--body);
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   }
 
-  /* SECTIONS */
+  /* SHARED SECTION TYPE */
   section { padding: 5rem 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
   .section-label {
     font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.12em; color: var(--green); margin-bottom: 0.75rem;
   }
-  .section-title {
+  h2.section-title {
     font-family: var(--sans); font-weight: 600;
-    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-    color: var(--dark); margin-bottom: 1rem;
-    letter-spacing: -0.015em; line-height: 1.2;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--navy); margin-bottom: 1.5rem;
+    letter-spacing: -0.02em; line-height: 1.15;
   }
-  .section-subtitle {
-    font-size: 1.05rem; color: var(--gray);
-    max-width: 680px; line-height: 1.7; margin-bottom: 3rem;
+  .section-lead {
+    font-size: 1.15rem; color: var(--body);
+    line-height: 1.6; max-width: 800px; margin-bottom: 3rem;
   }
 
-  /* UNTAPPED */
+  /* ENGAGING SCIENCE */
+  .engaging {
+    padding: 5rem 2rem;
+    background: #fff;
+  }
+  .engaging-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3.5rem; align-items: center;
+  }
+  .engaging-text h2 {
+    font-family: var(--sans); font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--navy); margin-bottom: 1.5rem;
+    letter-spacing: -0.02em; line-height: 1.15;
+  }
+  .engaging-text p {
+    font-size: 1.05rem; color: var(--body);
+    line-height: 1.7;
+  }
+  .engaging-image {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  }
+  .engaging-image img {
+    width: 100%; height: auto; display: block;
+  }
+
+  /* UNTAPPED VALUE */
   .untapped {
-  padding: 5rem 2rem;
-  background: var(--light);
-}
-.untapped .container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.untapped h2 {
-  font-family: var(--sans);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  color: var(--navy);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-}
-.untapped .lead {
-  font-family: var(--sans);
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--body);
-  max-width: 800px;
-  margin-bottom: 4rem;
-}
+    padding: 5rem 2rem;
+    background: var(--light);
+  }
+  .untapped .container { max-width: 1100px; margin: 0 auto; }
+  .untapped h2 {
+    font-family: var(--sans);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600; color: var(--navy);
+    letter-spacing: -0.02em; line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  .untapped .lead {
+    font-family: var(--sans);
+    font-size: 1.15rem; line-height: 1.6;
+    color: var(--body); max-width: 800px;
+    margin-bottom: 3rem;
+  }
+  .untapped-image {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    margin-bottom: 3.5rem;
+  }
+  .untapped-image img {
+    width: 100%; height: auto; display: block;
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+  }
+  .pain-item h3 {
+    font-family: var(--sans);
+    font-size: 1.25rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .pain-item p {
+    font-family: var(--sans);
+    font-size: 1rem; line-height: 1.6;
+    color: var(--gray);
+  }
 
-.pain-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem 4rem;
-}
-.pain-item h3 {
-  font-family: var(--sans);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-}
-.pain-item p {
-  font-family: var(--sans);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--gray);
-}
+  /* SOLUTION */
+  .solution {
+    padding: 5rem 2rem;
+    background: var(--light-blue);
+  }
+  .solution h2.section-title {
+    margin-bottom: 1rem;
+  }
+  .solution .section-lead {
+    margin-bottom: 3.5rem;
+  }
+  .solution-image {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    margin-bottom: 3.5rem;
+    background: #fff;
+  }
+  .solution-image img {
+    width: 100%; height: auto; display: block;
+  }
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .role-block .role-label {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--green); margin-bottom: 0.75rem;
+  }
+  .role-block h3 {
+    font-family: var(--sans);
+    font-size: 1.2rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .role-block ul {
+    list-style: none; padding: 0; margin: 0;
+  }
+  .role-block li {
+    font-size: 0.95rem; color: var(--body);
+    line-height: 1.55;
+    padding: 0.4rem 0 0.4rem 1.1rem;
+    position: relative;
+  }
+  .role-block li::before {
+    content: ''; position: absolute; left: 0; top: 0.85rem;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green); opacity: 0.6;
+  }
 
-@media (max-width: 700px) {
-  .pain-grid { grid-template-columns: 1fr; gap: 2rem; }
-}
-
-  /* YEAR-ROUND */
+  /* BEYOND THE ANNUAL MEETING */
   .year-round {
     background: var(--light-green);
-    border-top: 1px solid #C5E0C8; border-bottom: 1px solid #C5E0C8;
+    border-top: 1px solid #C5E0C8;
+    border-bottom: 1px solid #C5E0C8;
+    padding: 5rem 2rem;
   }
-  .year-round-inner { max-width: 780px; margin: 0 auto; text-align: center; }
-  .year-round .section-subtitle {
-    margin-left: auto; margin-right: auto; max-width: 640px; margin-bottom: 0;
+  .year-round-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3.5rem; align-items: center;
   }
-
-  /* AUDIENCES */
-  .audience-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem;
+  .year-round img {
+    width: 100%; border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
   }
-  .audience-card {
-    border: 1px solid var(--border); border-radius: 12px;
-    padding: 2.25rem; background: #fff; transition: all 0.3s;
+  .year-round h2 {
+    font-family: var(--sans); font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    color: var(--navy); letter-spacing: -0.02em;
+    line-height: 1.2; margin-bottom: 1.25rem;
   }
-  .audience-card:hover {
-    border-color: var(--green); box-shadow: 0 4px 24px rgba(27,122,43,0.06);
+  .year-round p {
+    font-size: 1.05rem; color: var(--body);
+    line-height: 1.7;
   }
-  .audience-label {
-    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: var(--green); margin-bottom: 0.75rem;
-  }
-  .audience-card h3 {
-    font-family: var(--sans); font-weight: 600; font-size: 1.25rem;
-    color: var(--dark); margin-bottom: 1rem; line-height: 1.3;
-  }
-  .audience-card ul { list-style: none; padding: 0; margin: 0; }
-  .audience-card li {
-    font-size: 0.9rem; color: var(--gray); line-height: 1.55;
-    padding: 0.4rem 0 0.4rem 1.1rem; position: relative;
-  }
-  .audience-card li::before {
-    content: ''; position: absolute; left: 0; top: 0.75rem;
-    width: 6px; height: 6px; border-radius: 50%;
-    background: var(--green); opacity: 0.5;
-  }
-
-  /* HOW */
-  .how {
-    background: var(--light);
-    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  }
-  .steps {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-    margin-top: 2rem; position: relative;
-  }
-  .steps::before {
-    content: ''; position: absolute; top: 32px;
-    left: calc(12.5% + 20px); right: calc(12.5% + 20px);
-    height: 2px; background: var(--border);
-  }
-  .step { text-align: center; position: relative; }
-  .step-num {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--navy); color: #fff;
-    display: inline-flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 1rem; margin-bottom: 1.25rem;
-    position: relative; z-index: 1;
-  }
-  .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; }
-  .step p { font-size: 0.88rem; color: var(--gray); line-height: 1.55; }
 
   /* CTA */
   .cta-section { background: var(--navy); padding: 5rem 2rem; text-align: center; }
   .cta-section h2 {
     font-family: var(--sans); font-weight: 600;
-    font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: #fff; margin-bottom: 1rem;
   }
   .cta-section p {
-    font-size: 1.05rem; color: rgba(255,255,255,0.75);
-    max-width: 480px; margin: 0 auto 2rem; line-height: 1.7;
+    font-size: 1.05rem; color: rgba(255,255,255,0.8);
+    margin: 0 auto 2rem; line-height: 1.7;
+  }
+  .cta-section a.video-link {
+    color: #fff; text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .cta-btn {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -288,35 +285,23 @@
   .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
 
   footer {
-    padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--border);
+    padding: 3rem 2rem; text-align: center;
+    border-top: 1px solid var(--border);
   }
   footer img { height: 40px; margin-bottom: 0.75rem; }
   footer p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
   footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .fade-in { opacity: 0; animation: fadeUp 0.6s ease forwards; }
-  .fade-in.d1 { animation-delay: 0.1s; }
-  .fade-in.d2 { animation-delay: 0.2s; }
-  .fade-in.d3 { animation-delay: 0.3s; }
-
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding-top: 7rem; }
-    .hero-image { max-width: 500px; }
-    .value-intro { grid-template-columns: 1fr; }
-    .audience-grid { grid-template-columns: 1fr; }
+    .engaging-grid { grid-template-columns: 1fr; }
+    .year-round-inner { grid-template-columns: 1fr; }
+    .role-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   }
-  @media (max-width: 768px) {
-    .value-grid { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: repeat(2, 1fr); }
-    .steps::before { display: none; }
+  @media (max-width: 700px) {
+    .pain-grid { grid-template-columns: 1fr; gap: 2rem; }
     .nav-links a:not(.nav-cta) { display: none; }
   }
-  @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -327,19 +312,20 @@
       <img src="images/logo-horizontal.png" alt="1stCite">
     </a>
     <div class="nav-links">
-      <a href="#value">The Opportunity</a>
+      <a href="#untapped">The Opportunity</a>
       <a href="#solution">The Solution</a>
-      <a href="#how">How It Works</a>
-      <a href="#contact" class="nav-cta">Get Started</a>
+      <a href="#year-round">Year-Round</a>
+      <a href="mailto:bob@1stcite.com" class="nav-cta">Get Started</a>
     </div>
   </div>
 </nav>
 
+<!-- HERO: The Conference in Full -->
 <section class="hero-thesis">
   <div class="hero-thesis-inner">
     <h1>The Conference in Full</h1>
-    <p>With 1stCite,</p>
-    <ul style="text-align:left; display:inline-block; margin:0.5rem auto 0; list-style:disc; padding-left:1.5rem; line-height:1.8;">
+    <p class="lede">With 1stCite,</p>
+    <ul>
       <li>attendees can view and discuss every talk,</li>
       <li>presenters can answer every question, and</li>
       <li>organizers can observe and measure it all in real time.</li>
@@ -347,22 +333,30 @@
   </div>
 </section>
 
-<div class="hero">
-  <div class="hero-text">
-    <h1 class="fade-in">Engaging Science</h1>
-    <p class="fade-in d1">Conferences are rare gatherings of expert communities. What happens during a presentation is everything that peer review aspires to be — real-time expert scrutiny, cross-pollination of ideas, and the collective reaction of that scientific community to new findings. Conferences create tremendous value. 1stCite helps more fully capture that value.</p>
+<!-- ENGAGING SCIENCE -->
+<section class="engaging">
+  <div class="engaging-grid">
+    <div class="engaging-text">
+      <h2>Engaging Science</h2>
+      <p>Conferences are rare gatherings of expert communities. What happens during a presentation is everything that peer review aspires to be — real-time expert scrutiny, cross-pollination of ideas, and the collective reaction of that scientific community to new findings. Conferences create tremendous value. 1stCite helps more fully capture that value.</p>
+    </div>
+    <div class="engaging-image">
+      <img src="images/conference-room.jpg" alt="A scientific conference session in progress">
+    </div>
   </div>
-  <div class="hero-image fade-in d3">
-    <img src="images/platform-view.png" alt="1stCite platform showing presentation with expert discussion">
-  </div>
-</div>
+</section>
 
-<section class="untapped">
+<!-- UNTAPPED VALUE -->
+<section class="untapped" id="untapped">
   <div class="container">
     <h2>Untapped Value</h2>
     <p class="lead">
       Conferences are remarkable gatherings of the world's experts compressing vast quantities of intellectual energy into a single time and place. Time constraints and practical realities make capturing that potential energy daunting. By extending the conference presentation in time and space, 1stCite redefines what's possible.
     </p>
+
+    <div class="untapped-image">
+      <img src="images/audience-photos.jpg" alt="Conference attendees photographing slides during a presentation">
+    </div>
 
     <div class="pain-grid">
       <div class="pain-item">
@@ -385,36 +379,42 @@
   </div>
 </section>
 
-<section id="solution" style="background:var(--light-blue); padding:5rem 2rem;">
+<!-- SOLUTION -->
+<section class="solution" id="solution">
   <div class="container">
     <div class="section-label">The 1stCite Solution</div>
-    <div class="section-title" style="margin-bottom:1rem;">Every presentation gets a structured home for discussion.</div>
-    <div class="section-subtitle" style="margin-bottom:3rem;">Before, during, and after the meeting — structured conversation between presenters, attendees, and the broader community.</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem;">
-      <div style="background:#fff; border-radius:12px; padding:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div class="section-label" style="color:var(--green);">For Attendees</div>
-        <h3 style="font-family:var(--sans); font-size:1.3rem; color:var(--dark); margin:0.5rem 0 1rem;">See more. Ask more. Miss less.</h3>
-        <ul style="list-style:disc; padding-left:1.2rem; color:var(--body); font-size:0.95rem; line-height:1.7;">
+    <h2 class="section-title">Every presentation gets a structured home for discussion.</h2>
+    <p class="section-lead">Before, during, and after the meeting — structured conversation between presenters, attendees, and the broader community.</p>
+
+    <div class="solution-image">
+      <img src="images/platform-view.png" alt="1stCite platform showing a presentation with expert discussion alongside">
+    </div>
+
+    <div class="role-grid">
+      <div class="role-block">
+        <div class="role-label">For Attendees</div>
+        <h3>See more. Ask more. Miss less.</h3>
+        <ul>
           <li>Scan presentations to decide which ones to attend and prepare questions in advance</li>
-          <li>Ask questions and comment on talks you can’t attend in person</li>
+          <li>Ask questions and comment on talks you can't attend in person</li>
           <li>Continue the discussion with presenters and other attendees after the session</li>
           <li>Search talks and get recommendations about which sessions to see</li>
           <li>Share and promote talks on social media</li>
         </ul>
       </div>
-      <div style="background:#fff; border-radius:12px; padding:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div class="section-label" style="color:var(--green);">For Presenters</div>
-        <h3 style="font-family:var(--sans); font-size:1.3rem; color:var(--dark); margin:0.5rem 0 1rem;">More feedback. Broader reach.</h3>
-        <ul style="list-style:disc; padding-left:1.2rem; color:var(--body); font-size:0.95rem; line-height:1.7;">
+      <div class="role-block">
+        <div class="role-label">For Presenters</div>
+        <h3>More feedback. Broader reach.</h3>
+        <ul>
           <li>Get substantive feedback — including questions before and after you present</li>
-          <li>Reach attendees who couldn’t make it to your session</li>
+          <li>Reach attendees who couldn't make it to your session</li>
           <li>1stCite is working with SAI, a nonprofit dedicated to scientific integrity, to provide DOIs and create a permanent open repository for conference science</li>
         </ul>
       </div>
-      <div style="background:#fff; border-radius:12px; padding:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div class="section-label" style="color:var(--green);">For Organizers & Societies</div>
-        <h3 style="font-family:var(--sans); font-size:1.3rem; color:var(--dark); margin:0.5rem 0 1rem;">Data. Reach. Year-round value.</h3>
-        <ul style="list-style:disc; padding-left:1.2rem; color:var(--body); font-size:0.95rem; line-height:1.7;">
+      <div class="role-block">
+        <div class="role-label">For Organizers &amp; Societies</div>
+        <h3>Data. Reach. Year-round value.</h3>
+        <ul>
           <li>See which talks attendees visit, comment on, star, and share</li>
           <li>Extend the value and reach of the conference far beyond the event</li>
           <li>Give members a tool to discuss research throughout the year</li>
@@ -425,22 +425,27 @@
   </div>
 </section>
 
-<section class="year-round">
-  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
-    <img src="images/network.jpg" alt="Global network of scientists" style="width:100%; border-radius:12px;">
+<!-- BEYOND THE ANNUAL MEETING -->
+<section class="year-round" id="year-round">
+  <div class="year-round-inner">
+    <img src="images/network.jpg" alt="Global network of scientists">
     <div>
       <div class="section-label">Beyond the Annual Meeting</div>
-      <div class="section-title">Your society is a year-round research community.</div>
-      <div class="section-subtitle" style="margin-bottom:0;">1stCite gives it the infrastructure to act like one — with presentations, discussion, and expert engagement happening continuously, not just during a few days in a convention center.</div>
+      <h2>Your society is a year-round research community.</h2>
+      <p>1stCite gives it the infrastructure to act like one — with presentations, discussion, and expert engagement happening continuously, not just during a few days in a convention center.</p>
     </div>
   </div>
 </section>
 
-<section class="cta" style="text-align:center; padding:4rem 2rem; background:var(--navy);">
+<!-- CTA -->
+<section class="cta-section">
   <div class="container">
-    <h2 style="font-family:var(--sans); color:#fff; font-size:2rem; margin-bottom:1rem;">Want to see it in action?</h2>
-    <p style="color:#ccc; margin-bottom:1.5rem;"><a href="https://youtu.be/SHktOBZeSEo" style="color:var(--accent);">Watch the overview →</a><br><a href="https://youtube.com/shorts/ieu3PDgIIEM" style="color:var(--accent);">See the walkthrough →</a></p>
-    <a href="mailto:bob@1stcite.com" class="hero-cta" style="display:inline-block;">Get Started</a>
+    <h2>Want to see it in action?</h2>
+    <p>
+      <a class="video-link" href="https://youtu.be/SHktOBZeSEo">Watch the overview →</a><br>
+      <a class="video-link" href="https://youtube.com/shorts/ieu3PDgIIEM">See the walkthrough →</a>
+    </p>
+    <a href="mailto:bob@1stcite.com" class="cta-btn">Get Started</a>
   </div>
 </section>
 
@@ -452,20 +457,6 @@
 <script>
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
-  });
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.value-card, .audience-card, .step, .value-intro-image').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease ' + (i * 0.08) + 's, transform 0.5s ease ' + (i * 0.08) + 's';
-    observer.observe(el);
   });
 </script>
 </body>
