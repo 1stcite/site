@@ -152,44 +152,56 @@
     max-width: 680px; line-height: 1.7; margin-bottom: 3rem;
   }
 
-  /* VALUE */
-  .value {
-    background: var(--light);
-    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  }
-  .value-intro {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    align-items: center; margin-bottom: 2.5rem;
-  }
-  .value-intro-image {
-    border-radius: 10px; overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-  }
-  .value-intro-image img {
-    width: 100%; display: block; border-radius: 10px;
-  }
-  .value-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
-  }
-  .value-card {
-    background: #fff; border: 1px solid var(--border); border-radius: 10px;
-    padding: 1.75rem; position: relative; overflow: hidden;
-    transition: box-shadow 0.3s;
-  }
-  .value-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
-  .value-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px; background: linear-gradient(90deg, var(--navy), var(--green)); opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .value-card:hover::before { opacity: 1; }
-  .value-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: var(--light-blue); display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1rem; color: var(--navy);
-  }
-  .value-card h3 { font-size: 1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; }
-  .value-card p { font-size: 0.92rem; color: var(--gray); line-height: 1.6; }
+  /* UNTAPPED */
+  .untapped {
+  padding: 5rem 2rem;
+  background: var(--light);
+}
+.untapped .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.untapped h2 {
+  font-family: var(--sans);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+.untapped .lead {
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 4rem;
+}
+.pain-item h3 {
+  font-family: var(--sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.pain-item p {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray);
+}
+
+@media (max-width: 700px) {
+  .pain-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
 
   /* YEAR-ROUND */
   .year-round {
@@ -345,46 +357,29 @@
   </div>
 </div>
 
-<section class="value" id="value">
+<section class="untapped">
   <div class="container">
-    <div class="value-intro">
-      <div>
-        <div class="section-label">Untapped Value</div>
-        <div class="section-title">Conferences are remarkable gatherings of the world’s experts compressing vast quantities of intellectual energy into a single time and place.</div>
-        <div class="section-subtitle" style="margin-top:1rem;">Time constraints and practical realities make capturing that potential energy daunting. By extending the conference presentation in time and space, 1stCite redefines what’s possible.</div>
-      </div>
-      <div class="value-image">
-        <img src="images/phones.png" alt="Attendees photographing a presentation slide with their phones">
-      </div>
-    </div>
-    <div class="value-cards">
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
-        </div>
+    <h2>Untapped Value</h2>
+    <p class="lead">
+      Conferences are remarkable gatherings of the world's experts compressing vast quantities of intellectual energy into a single time and place. Time constraints and practical realities make capturing that potential energy daunting. By extending the conference presentation in time and space, 1stCite redefines what's possible.
+    </p>
+
+    <div class="pain-grid">
+      <div class="pain-item">
         <h3>Parallel sessions</h3>
         <p>The structure of a typical conference means attendees miss most presentations, content they traveled across the world to see.</p>
       </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
+      <div class="pain-item">
         <h3>Time constraints</h3>
         <p>Presentations routinely end with unanswered questions. Every one that goes unasked is a missed opportunity.</p>
       </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        </div>
+      <div class="pain-item">
         <h3>Groundbreaking science disappears</h3>
         <p>After the conference, groundbreaking science disappears in the long wait to publication.</p>
       </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
+      <div class="pain-item">
         <h3>An untapped social network</h3>
-        <p>Scientific societies are natural, powerful social networks focused on research — yet most of that network’s energy is compressed into a few days a year. By creating a model for sharing presentations easily online, the conference and the conversations become unstuck in time.</p>
+        <p>Scientific societies are natural, powerful social networks focused on research — yet most of that network's energy is compressed into a few days a year. By creating a model for sharing presentations easily online, the conference and the conversations become unstuck in time.</p>
       </div>
     </div>
   </div>
