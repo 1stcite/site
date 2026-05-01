@@ -57,40 +57,80 @@
   }
   .nav-cta:hover { background: var(--accent) !important; }
 
-  /* HERO THESIS */
-  .hero-thesis {
-    padding: 8rem 2rem 4rem;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-  }
-  .hero-thesis-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .hero-thesis h1 {
-    font-family: var(--sans);
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
-    font-weight: 600;
-    color: var(--navy);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-  }
-  .hero-thesis .lede {
-    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
-    color: var(--body);
-    margin-bottom: 0.75rem;
-  }
-  .hero-thesis ul {
-    text-align: left;
-    display: inline-block;
-    list-style: disc;
-    padding-left: 1.5rem;
-    line-height: 1.8;
-    color: var(--body);
-    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-  }
+ /* HERO THESIS */
+.hero-thesis {
+  padding: 7rem 2rem 4rem;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.hero-thesis-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.hero-thesis h1 {
+  font-family: var(--sans);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.hero-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.hero-panel {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.hero-panel.image {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  aspect-ratio: 4 / 5;
+}
+.hero-panel.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-panel.text {
+  background: var(--light-blue);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.hero-panel.text .lede {
+  font-family: var(--sans);
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.hero-panel.text ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0;
+}
+.hero-panel.text li {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--body);
+  margin-bottom: 0.85rem;
+}
+.hero-panel.text li:last-child { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .hero-panels { grid-template-columns: 1fr; gap: 1.25rem; }
+  .hero-panel.image { aspect-ratio: 16 / 10; }
+  .hero-panel.text { padding: 2rem 1.5rem; }
+}
 
   /* SHARED SECTION TYPE */
   section { padding: 5rem 2rem; }
@@ -348,12 +388,22 @@
 <section class="hero-thesis">
   <div class="hero-thesis-inner">
     <h1>The Conference in Full</h1>
-    <p class="lede">With 1stCite,</p>
-    <ul>
-      <li>attendees can view and discuss every talk,</li>
-      <li>presenters can answer every question, and</li>
-      <li>organizers can observe and measure it all in real time.</li>
-    </ul>
+    <div class="hero-panels">
+      <figure class="hero-panel image">
+        <img src="images/poster-session.png" alt="Attendees discussing research at a busy conference poster session">
+      </figure>
+      <div class="hero-panel text">
+        <p class="lede">With 1stCite,</p>
+        <ul>
+          <li>attendees can view and discuss every talk,</li>
+          <li>presenters can answer every question, and</li>
+          <li>organizers can observe and measure it all in real time.</li>
+        </ul>
+      </div>
+      <figure class="hero-panel image">
+        <img src="images/platform-presentation.jpg" alt="A scientific presentation in progress in a conference auditorium">
+      </figure>
+    </div>
   </div>
 </section>
 
