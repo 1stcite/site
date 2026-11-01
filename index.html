@@ -350,6 +350,13 @@
     transition: all 0.25s; box-shadow: 0 2px 16px rgba(0,0,0,0.15);
   }
   .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+  .cta-email { margin-top: 1.25rem; font-size: 0.95rem; opacity: 0.95; }
+  .copy-btn {
+    margin-left: 0.5rem; padding: 0.2rem 0.7rem; border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.6); background: transparent; color: #fff;
+    font: inherit; font-size: 0.85rem; cursor: pointer;
+  }
+  .copy-btn:hover { background: rgba(255,255,255,0.15); }
 
   footer {
     padding: 3rem 2rem; text-align: center;
@@ -382,7 +389,7 @@
       <a href="#untapped">The Opportunity</a>
       <a href="#solution">The Solution</a>
       <a href="#year-round">Year-Round</a>
-      <a href="mailto:bob@1stcite.com" class="nav-cta">Get Started</a>
+      <a href="#contact" class="nav-cta">Get Started</a>
     </div>
   </div>
 </nav>
@@ -533,14 +540,18 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" id="contact">
   <div class="container">
     <h2>Want to see it in action?</h2>
     <p>
       <a class="video-link" href="https://youtu.be/SHktOBZeSEo">Watch the overview →</a><br>
       <a class="video-link" href="https://youtube.com/shorts/ieu3PDgIIEM">See the walkthrough →</a>
     </p>
-    <a href="mailto:bob@1stcite.com" class="cta-btn">Get Started</a>
+    <a href="mailto:bob@1stcite.com?subject=Getting%20started%20with%201stCite" class="cta-btn">Get Started</a>
+    <p class="cta-email">
+      Or write to <strong>bob@1stcite.com</strong>
+      <button type="button" class="copy-btn" id="copy-email">Copy</button>
+    </p>
   </div>
 </section>
 
@@ -550,6 +561,15 @@
 </footer>
 
 <script>
+  // "Get Started" opens an email where a mail app is set up; the address is
+  // also shown with a copy button for people who use webmail.
+  document.getElementById('copy-email').addEventListener('click', async (e) => {
+    try {
+      await navigator.clipboard.writeText('bob@1stcite.com');
+      e.target.textContent = 'Copied';
+      setTimeout(() => { e.target.textContent = 'Copy'; }, 2000);
+    } catch {}
+  });
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
   });
